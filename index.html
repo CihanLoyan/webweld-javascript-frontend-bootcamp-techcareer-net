@@ -3,23 +3,86 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <h1>WebWeld Javascript Front-End Bootcamp</h1>
-
     <style>
-        .example-area {
-            width: 400px;
-            height: 400px;
-            background-color: red;
-            position: relative;
+        body {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            height: 70px;
+            box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.1);
+        }
+        .dropbtn {
+            width: 100px;
+            height: 100%;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            background-color: inherit;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover {
+            color: green;
         }
         
+        .dropdown {
+            position: relative;
+            display: block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #eeeeee;
+            width: 150px;
+            top: 55px;  
+            box-shadow: 0px 0px 16px 0px #eeeeee;
+            border-radius: 5px;
+        }
+
+        .dropdown-content::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background-color: #eaeaea;
+            top: -5px;
+            left: 30px;
+            z-index: -1;
+            transform: rotate(45deg)
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #e8e8e8;
+            color: green;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
     </style>
-    <div class="example-area">
-        <div class="box-20">
-            <div class="box-21"></div>
+</head>
+<body>
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">Etkinlikler</button>
+            <div class="dropdown-content">
+                <a href="#">Bootcamp</a>
+                <a href="#">Hackathon</a>
+                <a href="#">Tüm Etkinlikler</a>
+            </div>
         </div>
-    </div>
+    </nav>
 </body>
 </html>
