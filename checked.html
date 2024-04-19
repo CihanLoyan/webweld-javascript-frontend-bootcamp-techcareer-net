@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        input[type="radio"]:checked + span {
+            color: green;
+            text-decoration: underline;
+        }
+
+        input[type="checkbox"]:checked + span {
+            color: green;
+            text-transform: uppercase;
+        }
+        
+        .div-paragraf {
+            background-color: yellow;
+        }
+
+        .div-paragraf:has(.paragraf) {
+            background-color: tomato;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Cinsiyetiniz:</p>
+    <label>
+        <input type="radio" name="cinsiyet" value="erkek">
+        <span>Erkek</span>
+    </label>
+    <label>
+        <input type="radio" name="cinsiyet" value="kadin">
+        <span>Kadın</span>
+    </label>
+    <br>
+
+    <label>
+        <input type="checkbox" class="check-box" id="cb">
+        <span>Okudum, kabul ediyorum...</span>
+    </label>
+
+    <div class="div-paragraf">
+        <p class="paragraf">Paragraph 1</p>
+    <div>
+    <div class="div-paragraf">
+        paragraf2
+    </div>
+    
+</body>
+</html>
