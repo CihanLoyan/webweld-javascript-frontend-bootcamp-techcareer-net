@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title> 
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+       .check-box {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 70px;
+            height: 25px;
+            border-radius: 30px;
+            background-color: white;
+            box-shadow: 1px 1px 2px .1px rgb(104, 104, 104);
+            background-color: #bcbcbc;
+            transition: 500ms;
+            cursor: pointer;
+       }
+
+        .check-box .check-btn {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            left: 5px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            transition: 500ms all;
+            box-shadow: 1px 1px 2px .1px rgb(104, 104, 104);
+       }
+
+        input {
+            display: inline;
+            visibility: hidden;
+        }
+
+        input:checked + .check-box {
+            background-color: #ffcc00;
+        }
+        input:checked + .check-box .check-btn {
+            left: 47px;
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox">
+        <div class="check-box">
+            <span class="check-btn"></span>
+        </div>
+    </label>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title> 
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+        }
+
+        .container {
+            display: flex;
+            background-color: #995DB5;
+        }
+
+        .container > .box {
+            padding: 20px;
+            border: 1px solid #995DB5;
+            background-color: #F7941F;
+        }
+        
+        .container > .box:first-child {
+            order: 3;
+        }
+
+        .container > .box:last-child {
+            order: 2;
+        }
+
+        .container > .box:nth-child(2) {
+            order: 4;
+        }
+
+        .container > .box:nth-child(3) {
+            order: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- .box*15{Box $} -->
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+    </div>
+    
+    <script src="arrow.js"></script>
+</body>
+</html>
