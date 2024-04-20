@@ -72,6 +72,55 @@
         .dropdown:hover .dropdown-content {
           display: block;
         }
+
+        body div:nth-child(2) {
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 70px;
+        }
+
+        body div form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #to-do-list {
+            margin-top: 5px;
+        }
+
+        #to-do-list li {
+            margin-top: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .add-button {
+            background-color: #24c600;
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        .delete-button {
+            background-color: #ff0000;
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 15px;
+        }
     </style>
 </head>
 <body>
@@ -86,36 +135,21 @@
         </div>
     </nav>
 
-    <button onclick="goTo()" id="goTo">Git</button>
+    <!-- createElement
+         appendChild
+         prependChild
+    -->
+    <div>
+        <form>
+            <label for="to-do">Yapılacaklar</label>
+            <input type="text" id="to-do" placeholder="Giriniz...">
+            <button class="add-button" onclick="addList()">Ekle</button>
+        </form>
+        <ul id="to-do-list">
 
-    <form action="">  <!-- onBlur events -->
-        <label for="username">Enter your username:</label>
-        <input type="email" id="username" onblur="myOnBlur()"> <!-- input'tan çıktığıbnda fonksiyonun çalışmasını istiyoruz. -->
-        <label for="username">Forgot your username?</label>
-    </form>
-
-    <select id="mySelect" onchange="myOnChange()"> <!-- select her değiştiğinde fonksiyon çalışır. -->
-        <option value="Audi">Audi</option>
-        <option value="BMW">BMW</option>
-        <option value="Mercedes">Mercedes</option>
-        <option value="Volvo">Volvo</option>
-    </select>
-    <p id="selected"></p>
-
-    <form onsubmit="mySubmit()">
-        <label for="on-submit">Enter Your Name</label>
-        <input type="text" name="fname" id="on-submit">
-        <input type="submit" value="Submit">
-    </form>
-
-    <form>
-        <input type="text" onkeypress="myKeyPress()" placeholder="Bilgilerizi giriniz">
-    </form>
+        </ul>
+    </div>
 
 </body>
-<script src="arrays.js"></script>
-<script src="conditions.js"></script>
-<script src="functions.js"></script>
-<script src="events.js"></script>
-<script src="basicToDo"></script>
+<script src="basic-to-do.js"></script>
 </html>
