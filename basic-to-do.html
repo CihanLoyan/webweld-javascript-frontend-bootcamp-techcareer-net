@@ -79,7 +79,7 @@
             margin-top: 70px;
         }
 
-        body div form {
+        body div .form {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -107,6 +107,11 @@
             font-size: 16px;
             cursor: pointer;
             margin-left: 15px;
+        }
+
+        #cb:checked + span {
+            text-decoration: line-through;
+            opacity: .3;
         }
 
         .delete-button {
@@ -137,19 +142,18 @@
 
     <!-- createElement
          appendChild
-         prependChild
+         prepend
     -->
     <div>
-        <form>
+        <div class="form">
             <label for="to-do">Yapılacaklar</label>
             <input type="text" id="to-do" placeholder="Giriniz...">
             <button class="add-button" onclick="addList()">Ekle</button>
-        </form>
+        </div>
         <ul id="to-do-list">
 
         </ul>
     </div>
-
 </body>
 <script src="basic-to-do.js"></script>
 </html>
