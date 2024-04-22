@@ -15,11 +15,13 @@ const addList = () => {
     }   
 }
 
+// local storage'a kaydet
 const saveListToLocalStorage = () => {
     const list = document.getElementById("to-do-list").innerHTML;
     localStorage.setItem("to-do-list", list);
 }
 
+// local storage'dan yükle
 const loadListFromLocalStorage = () => {  // local storage'dan listeyi getir.
     const list = localStorage.getItem("to-do-list");
     if (list) {
