@@ -36,7 +36,7 @@ const getName = (callback) => {  // getName fonksiyonuna başka bir fonksiyonu p
     }, 1000)  
 }
 
-const getSurname = () => {
+const getSurname = () => {   // callback = getSurname
     setTimeout(() => {
         console.log("Loyan");
     }, 500) 

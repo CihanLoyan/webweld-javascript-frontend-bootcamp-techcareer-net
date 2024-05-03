@@ -1,20 +1,5 @@
 const API_URL = "https://jsonplaceholder.typicode.com/posts";
-/* 
-function getPosts(url) {
-    fetch(API_URL)
-        .then(res => {
-            res.json())
-        })
-        .then(data => {
-            console.log(data)
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    return datas;
-}       
- */
-/*----------------------- YUKARIDAKİ KODUN DAHA KISA HALİ: -----------------------------*/
+
 /* function getPosts(url) {
     fetch(url)
     .then(res => res.json())
@@ -57,12 +42,18 @@ getPosts(API_URL);
 
 
 // BELİRTİLEN POST ID'YE AİT YORUMLARI GETİR:
-const getComments = async () => {
-    const resPost = await fetch("https://jsonplaceholder.typicode.com/posts/7");
+const POST_URL = "https://jsonplaceholder.typicode.com/posts"
+const COMMENT_URL = "https://jsonplaceholder.typicode.com/comments"
+
+// ID'Sİ 7 OLAN POST'A AİT TÜM YORUMLARI GETİREN FONKSİYON:
+const getComments = async (postUrl, commentUrl) => {
+    const resPost = await fetch(`${POST_URL}/7`);  // ID = 7 OLAN POST'U GETİR
     const post = await resPost.json();
     console.log(post);
 
-    const resComment = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${post.id}`)
+    const resComment = await fetch(`${COMMENT_URL}?postId=${post.id}`)  // YUKARIDA DÖNEN POST'A AİT YORUMLARI GETİR
     const comment = await resComment.json();
     console.log(comment);
 }
+
+getComments(POST_URL, COMMENT_URL);
