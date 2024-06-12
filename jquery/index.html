@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .area {
+            position: relative;
+            display: inline;
+        }
+
+        .area span {
+            position: absolute;
+            right: 7px;
+            bottom: 7px;
+        }
+    </style>
+</head>
+<body>
+   <!--  <script>
+        $(document).ready(function() {
+            $('#messageItem').css("background-color", "red")
+        })
+    </script>
+ -->
+
+    <div class="area">
+        <textarea name="" id="messageItem" cols="30" rows="10" maxlength="2000"></textarea>
+        <span>2000</span>
+    </div>
+
+    <script>
+        let messageItem = $('#messageItem')
+        let counter = $('.area span');
+
+        $(messageItem).on('keyup', function () {
+            let messageLength = $(messageItem).val().length;  //  messageItem içindeki  length
+            let newCounter = $(messageItem).attr("maxlength") - messageLength;  // messageItem'ın maxlength değerinden içeride kalan length sayısını çıkar.
+            $(counter).text(newCounter);
+        })
+
+    </script>
+
+</body>
+</html>
